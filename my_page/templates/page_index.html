@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>过敏原-首页</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css">
+	<script src="/static/js/movev3.0.js"></script>
+	<script type="text/javascript">
+window.onload=function()
+{
+	 var oUL=document.getElementById('ul1');
+	 var minzIndex=2;
+	 var aLi=document.getElementById('ul1').getElementsByTagName('li');
+
+	 for (var i = 0; i < aLi.length; i++) 
+	 {
+	 	/*aLi[i].innerHTML='left:'+aLi[i].offsetLeft+',top:'+aLi[i].offsetTop;*/
+	 	aLi[i].style.left=aLi[i].offsetLeft+'px';
+	 	aLi[i].style.top=aLi[i].offsetTop+'px';
+	 }
+	 for (var i = 0; i < aLi.length; i++) 
+	 {
+	 	aLi[i].style.position='absolute';
+	 	aLi[i].style.margin='0';
+	 }
+	 for (var i = 0; i < aLi.length; i++) 
+	 {
+	 	aLi[i].onmouseover=function()
+	 	{
+	 		this.style.zIndex=minzIndex++;
+	 		startMove(this,{width:500,height:500,marginTop:-40,marginLeft:-40})
+	 	}
+	 	aLi[i].onmouseout=function()
+	 	{
+	 		startMove(this,{width:300,height:300,marginTop:10,marginLeft:10})
+	 	}
+	 }
+}
+</script>
+</head>
+<body>
+	<ul class="box">
+		<li><a href="http://127.0.0.1:8000/">首 页</a></li>
+		<li class="line">|</li>
+		<li><a href="{% url 'pro_list'%}">过敏原</a></li>
+		<li class="line">|</li>
+		<li><a href="page/ani/1">鱼类</a></li>
+		<li class="line">|</li>
+		<li><a href="page/ani/2">虾类</a></li>
+		<li class="line">|</li>
+		<li><a href="page/ani/3">蟹类</a></li>
+		<li class="line">|</li>
+		<li><a href="page/ani/4">贝类</a></li>
+		<li class="line">|</li>
+		<li><a href="page/spe">红外光谱介绍</a></li>
+	</ul>
+	<div class="indexbox">
+	<ul id="ul1">
+	<a href="page/ani/1"><li id='li1'><h3>鱼</h3></li></a>
+	<a href="page/ani/2"><li id='li2'><h3>虾</h3></li></a>
+	<a href="page/ani/3"><li id='li3'><h3>蟹</h3></li></a>
+	<a href="page/ani/4"><li id='li4'><h3>贝</h3></li></a>
+	</ul>
+	</div>
+	<div class="footer">
+		<p>豫ICP备18042850号-1 Copyright©2019-2020 版权所有 B403@ISHOU</p>
+		<p>农业部水产品贮藏保鲜质量安全风险评估实验室(上海)</p>
+	</div>
+</body>
+</html>

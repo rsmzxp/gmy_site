@@ -1,0 +1,127 @@
+.box{
+	width:958px;
+	height:40px;
+	border:1px solid #000;
+	margin:0 auto 0;
+	text-align:center;
+	line-height:40px;
+	font-size:0;
+	background-color:#55a8ea;
+}
+.box li{
+	list-style:none;
+	display:inline-block;
+	font-size:14px;
+}
+.box li a{
+	text-decoration:none;
+	font-family:"Microsoft Yahei";
+	color:#333;
+}
+.box .line{
+	margin:0 20px;
+}
+.box li a:hover{
+	color:red;
+}
+.mytable{
+	width:100%;
+	margin:10px auto 0;
+	text-align:left;
+	margin:0 20px;
+}
+.mytable td{
+	width: 20%;
+	border: 1px;
+	padding:1px;
+	margin:0 auto;
+}
+.mytable td a:link{
+	text-decoration:none;    
+	color:blue/*默认状态*/   
+}
+.mytable td a:visited{
+	text-decoration:none; /*指已经访问过的链接*/
+}
+.mytable td a:hover{ 
+	text-decoration: none;
+	color: red;/*指鼠标在链接*/
+}
+.mytable td a:active{
+	text-decoration:none;/* 指正在点的链接*/ 
+}
+.imgbox{
+	height:650px;
+	width:1000px;
+	margin:10px auto 0;
+	list-style:none;
+}
+.imgbox img{
+	width: 1000px;
+}
+.back{
+	text-align: center;
+	margin:10px auto 0;
+	list-style:none;
+}
+.back a:link{
+	text-decoration:none;    
+	color:blue/*默认状态*/   
+}
+.back a:visited{
+	text-decoration:none; /*指已经访问过的链接*/
+}
+.back a:hover{ 
+	text-decoration: none;
+	color: red;/*指鼠标在链接*/
+}
+.back a:active{
+	text-decoration:none;/* 指正在点的链接*/ 
+}
+#ul1 {
+	width: 1300px;
+	margin:0 auto;
+}
+#ul1 li {
+	list-style:none; 
+	width: 300px; 
+	height: 300px;  
+	background-size: contain;
+	background-repeat:no-repeat;
+	border:1px solid black; 
+	float: left; 
+	margin: 100px 5px 0; 
+	z-index:1 ;
+}
+#ul1 #li1{
+	background:url(/static/img/index1.jpg);
+}
+#ul1 #li2{
+	background:url(/static/img/index2.jpg);
+}
+#ul1 #li3{
+	background:url(/static/img/index3.jpg);
+}
+#ul1 #li4{
+	background:url(/static/img/index4.jpg);
+}
+.indexbox{
+	height: 500px;
+	margin: 20px auto 0;
+}
+.footer {
+	margin:50px auto 0;
+	background-color: #eee;
+	color:#555;
+}
+.footer p {
+	text-align: center;
+}
+.pro_info {
+	margin: 20px auto 0;
+	width: 1200px;
+}
+.spe_info{
+	margin: 20px auto 0;
+	width: 1200px;
+}

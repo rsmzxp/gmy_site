@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{{kind}}</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css">
+</head>
+<body>
+	<ul class="box">
+		<li><a href="http://127.0.0.1:8000/">首 页</a></li>
+		<li class="line">|</li>
+		<li><a href="{% url 'pro_list'%}">过敏原</a></li>
+		<li class="line">|</li>
+		<li><a href="page/ani/1">鱼类</a></li>
+		<li class="line">|</li>
+		<li><a href="page/ani/2">虾类</a></li>
+		<li class="line">|</li>
+		<li><a href="page/ani/3">蟹类</a></li>
+		<li class="line">|</li>
+		<li><a href="page/ani/4">贝类</a></li>
+		<li class="line">|</li>
+		<li><a href="page/spe">红外光谱介绍</a></li>
+	</ul>
+	<div><h3>{{kind}}类共有{{animals|length}}种</h3></div>
+	<hr>
+	<table class='mytable'>
+	<tr>
+		<td>名称</td>
+		<td>科</td>
+		<td>属</td>
+		<td>种</td>
+		<td>过敏原</td>
+	</tr>
+	<tr>
+	{% for animal in animals %}
+	<td>{{animal.name}}</td>
+	<td>{{animal.family_name}}</td>
+	<td>{{animal.category_name}}</td>
+	<td>{{animal.species_name}}</td>
+	<td>{{animal.pro_name}}<a href="page/pic/{{animal.id}}A">&nbsp;&nbsp;原始&nbsp;&nbsp;<a href="page/pic/{{animal.id}}B">二阶</a></td>
+	</tr>
+	{% endfor %}
+	</table>
+	<hr>
+	<li class="back"><a href="/">返回首页</a></li>
+	<div class="footer">
+		<p>豫ICP备18042850号-1 Copyright©2019-2020 版权所有 B403@ISHOU</p>
+		<p>农业部水产品贮藏保鲜质量安全风险评估实验室(上海)</p>
+	</div>
+</body>
+</html>
