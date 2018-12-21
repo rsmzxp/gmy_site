@@ -38,3 +38,6 @@ def page_pro_pic(request,index):
 #显示红外光谱的基本介绍
 def page_spe(request):
 	return render_to_response('page_spe.html')
+#返回实验室的基本信息
+def page_lab(request):
+	return render_to_response('page_lab.html')

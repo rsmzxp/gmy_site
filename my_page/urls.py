@@ -8,5 +8,6 @@ urlpatterns = [
 	#http://localhost:8000/ani,进入样品详情页
 	url(r'ani/(\d+)/$',views.page_ani_list,name='ani_list'),
 	url(r'pic/(1[0-9][A,B]|[1-9][A,B]|2[0-8][A,B])/$',views.page_pro_pic,name='pro_pic'),
-	url(r'spe',views.page_spe,name='page_spe')
+	url(r'spe',views.page_spe,name='page_spe'),
+	url(r'lab',views.page_lab,name='page_lab')
 ]

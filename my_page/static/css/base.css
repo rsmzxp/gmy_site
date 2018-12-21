@@ -119,9 +119,36 @@
 }
 .pro_info {
 	margin: 20px auto 0;
-	width: 1200px;
+	width: 1000px;
+	line-height:35px;
 }
 .spe_info{
 	margin: 20px auto 0;
-	width: 1200px;
+	width: 1000px;
+	line-height:35px;
+}
+.site_title{
+	list-style: none;
+	margin: 40px auto 0px;
+}
+.site_title h1{
+	text-align: center;
+	text-decoration:none;
+	font-family:"Microsoft Yahei";
+	color:#333;
+}
+.lab_info{
+	margin: 20px auto 0;
+	width: 1000px;
+	line-height:35px;
+}
+.imgbox2{
+	height:200px;
+	width:1000px;
+	margin:40px auto 10px;
+	list-style:none;
+}
+.imgbox2 img{
+	width: 1000px;
+	text-align: center;
 }
